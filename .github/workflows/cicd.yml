@@ -12,6 +12,12 @@ jobs:
     steps:
     - name : checkout
       uses: actions/checkout@v3
+
+    - id : "auth"
+      name : Authenticate to GCP
+      uses : google-github-actions/auth@v0
+      with:
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
     
     - name : server-on
       run : |-
