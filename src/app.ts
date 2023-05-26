@@ -27,6 +27,10 @@ app.get("/", (req, res) => {
   res.send("health Checker");
 });
 
+app.get("/cd", (req, res)=> {
+  res.send("cd complete")
+})
+
 app.use((error, req, res, next) => {
   console.log(error);
   res.status(error.status || 500).json({
