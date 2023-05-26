@@ -22,6 +22,7 @@ jobs:
     - name : server-on
       run : |-
         gcloud compute ssh --project=${{ secrets.GCP_PROJECT_ID }} --zone=${{ secrets.GCP_ZONE }} ${{ secrets.GCP_VM_NAME }}@${{ secrets.GCP_VM_NAME2 }} \
+        --command "cd github-action" \
         --command "docker-compose -f docker-compose.prod.yaml stop" \
         --command "docker image prune -a" \
         --command "git pull" \
