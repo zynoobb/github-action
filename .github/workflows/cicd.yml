@@ -26,5 +26,5 @@ jobs:
         --command "docker-compose stop" \
         --command "docker image prune -a" \
         --command "git pull" \
-        --command "docker-compose -f docker-compose.prod.yaml build" \
-        --command "docker-compose -f docker-compose.prod.yaml up" \
+        --command "docker-compose -f ./docker-compose.prod.yaml build" \
+        --command "docker-compose -f ./docker-compose.prod.yaml up -d" \
