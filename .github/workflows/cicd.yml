@@ -29,6 +29,4 @@ jobs:
         --command "docker image prune -a" \
         --command "git pull" \
         --command "cd github-action" \
-        --command "docker-compose -f docker-compose.prod.yaml build" \
-        --command "cd github-action" \
-        --command "docker-compose -f docker-compose.prod.yaml up -d" \
+        --command "docker-compose -f docker-compose.prod.yaml up -d --build" \
