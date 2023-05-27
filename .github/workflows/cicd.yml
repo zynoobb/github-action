@@ -20,14 +20,12 @@ jobs:
         credentials_json: ${{ secrets.GCP_SA_KEY }}
     
     - name : server-on
-      steps :
-        - name : server-on step
-          run : |-
-            gcloud compute ssh --project=${{ secrets.GCP_PROJECT_ID }} --zone=${{ secrets.GCP_ZONE }} ${{ secrets.GCP_VM_NAME }}@${{ secrets.GCP_VM_NAME2 }} \
-            --command "cd github-action" \
-            --command "docker-compose stop" \
-            --command "docker system prune -a" \
-            --command "git pull" \
-            --command "cd github-action" \
-            --command "ls" \
+      run : |-
+        gcloud compute ssh --project=${{ secrets.GCP_PROJECT_ID }} --zone=${{ secrets.GCP_ZONE }} ${{ secrets.GCP_VM_NAME }}@${{ secrets.GCP_VM_NAME2 }} -- \
+        "cd github-action &&  \
+        docker-compose stop && \
+        docker system prune -a && \
+        git pull && \
+        cd github-action && \
+        ls"
         
