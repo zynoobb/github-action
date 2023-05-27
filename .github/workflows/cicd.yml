@@ -20,7 +20,6 @@ jobs:
     - run : yarn ci
     - run : yarn test
 
-jobs:
   cd:
     name : gitaction-cd
     runs-on: ubuntu-latest
