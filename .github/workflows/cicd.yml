@@ -19,8 +19,12 @@ jobs:
         cache : "yarn"
     - name : yarn install
       run : yarn install
-    - name : yarn ci
-      run : yarn ci
+    - name: create .env file
+      run: |
+        touch .env
+        cat << EOF >> .env
+        ${{ secrets.ENV }}
+
     - name : yarn test
       run : yarn test
 
