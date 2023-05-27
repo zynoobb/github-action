@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cd", (req, res)=> {
-  res.send("cd complete")
+  res.send("해치웠나")
 })
 
 app.use((error, req, res, next) => {
