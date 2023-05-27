@@ -19,6 +19,8 @@ jobs:
         cache : "yarn"
     - name : yarn install
       run : yarn install
+    - name : yarn ci
+      run : yarn ci
     - name : yarn test
       run : yarn test
 
