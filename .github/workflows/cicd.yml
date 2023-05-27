@@ -22,11 +22,9 @@ jobs:
     - name : server-on
       run : |-
         gcloud compute ssh --project=${{ secrets.GCP_PROJECT_ID }} --zone=${{ secrets.GCP_ZONE }} ${{ secrets.GCP_VM_NAME }}@${{ secrets.GCP_VM_NAME2 }} \
-        --command "ls -al" \
         --command "cd github-action" \
-        --command "ls -al" \
         --command "docker-compose stop" \
-        --command "docker image prune -a" \
+        --command "docker system prune -a" \
         --command "git pull" \
         --command "cd github-action" \
         --command "docker-compose -f /home/zynomark1/github-action/docker-compose.prod.yaml up -d --build" \
