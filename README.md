@@ -9,7 +9,7 @@
 <br>
 
 ### **Docs 주소**
-**[https://zyno.store.api-docs](https://zyno.store.api-docs)**
+**[https://zyno.store/api-docs](https://zyno.store/api-docs)**
 
 <br>
 
