@@ -2,7 +2,13 @@
 
 <br>
 
+### **배포 기간 5/23 ~ 6/14**
+
+<br>
+
 ### **배포 주소**
+
+<br>
 
 **[https://zyno.store](https://zyno.store)**
 
